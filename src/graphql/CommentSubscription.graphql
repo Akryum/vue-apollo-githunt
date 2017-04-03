@@ -1,0 +1,7 @@
+#import "./CommentsPageComment.graphql"
+
+subscription onCommentAdded($repoFullName: String!){
+  commentAdded(repoFullName: $repoFullName){
+    ...CommentsPageComment
+  }
+}
